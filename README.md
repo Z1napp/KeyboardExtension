@@ -1,11 +1,11 @@
 # KeyboardExtension
 
 
-import UIKit
+    import UIKit
 
-extension UIView {
+    extension UIView {
     func bindToKeyboard() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notif:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notif:)), name:     UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     @objc func keyboardWillChange(notif: NSNotification) {
@@ -23,4 +23,4 @@ extension UIView {
                                     self.frame.origin.y += deltaY
         }, completion: nil)
     }
-}
+    }
